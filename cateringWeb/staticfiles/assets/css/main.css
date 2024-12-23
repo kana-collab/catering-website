@@ -12,8 +12,8 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Biryani",  sans-serif;
+  --default-font: "Yatra One","Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Cormorant Garamond",  sans-serif;
   --nav-font: "Inter",  sans-serif;
 }
 
@@ -770,9 +770,9 @@ section,
 }
 
 .section-title h2 {
-  font-size: 13px;
+  font-size: 17px;
   letter-spacing: 1px;
-  font-weight: 200;
+  font-weight: 400;
   padding: 0;
   margin: 0;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
@@ -1491,7 +1491,7 @@ section,
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
-  padding: 14px 60px;
+  padding: 14px 60px 14px;
   transition: 0.4s;
   border-radius: 4px;
 }

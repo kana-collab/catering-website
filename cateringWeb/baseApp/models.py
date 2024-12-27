@@ -165,7 +165,7 @@ class BookADateForm(models.Model):
     customer_phone = models.CharField(max_length=15, verbose_name="Customer Phone Number")
     event_date = models.DateField(verbose_name="Date of Event")
     event_time = models.TimeField(verbose_name="Time of Event")
-    num_people = models.IntegerField(verbose_name="Number of People")
+    num_people = models.PositiveIntegerField(verbose_name="Number of People")
     message = models.TextField(verbose_name="Message")
 
     def __str__(self):
@@ -173,7 +173,7 @@ class BookADateForm(models.Model):
 
 
 class ContactSection(models.Model):
-    opening_hours = models.TextField(verbose_name="Opening Hours")
+    opening_hours = models.TextField(verbose_name="Calling Hours")
     phone_number = models.CharField(max_length=20, verbose_name="Phone Number")
     email = models.EmailField(verbose_name="Email Address")
 

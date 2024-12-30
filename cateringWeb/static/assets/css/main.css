@@ -528,7 +528,7 @@ h6 {
 
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
-    position: absolute;
+    position: relative;
     font-size: 32px;
     top: 15px;
     right: 15px;

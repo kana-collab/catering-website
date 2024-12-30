@@ -17,8 +17,8 @@ class MetaData(models.Model):
 class websiteDetail(models.Model):
     headline = models.CharField(max_length=200, verbose_name="Headline")
     title_logo = models.ImageField(upload_to='favicon/', verbose_name="title icon",)  
-    logo = models.ImageField(upload_to='logo/', verbose_name="Business logo", null=True)
-    logo_description = models.CharField(max_length=400, verbose_name='logo description', blank=True)
+    #logo = models.ImageField(upload_to='logo/', verbose_name="Business logo", null=True)
+    #logo_description = models.CharField(max_length=400, verbose_name='logo description', blank=True)
 
     def __str__(self):
         return self.headline

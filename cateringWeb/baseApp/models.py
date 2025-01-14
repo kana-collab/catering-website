@@ -29,7 +29,7 @@ class HomeSection(models.Model):
     title_text = models.CharField(max_length=100, verbose_name="Title Text")
     description = models.TextField(verbose_name="Description")
     cta_button_text = models.CharField(max_length=100, verbose_name="CTA Button Text")
-    watch_video_button_link = models.URLField(verbose_name="Watch Video Button Link")
+    #watch_video_button_link = models.URLField(verbose_name="Watch Video Button Link")
     dish_image = models.ImageField(upload_to='media/home/', verbose_name="Dish Image")
     image_description = models.CharField(max_length=400, verbose_name='dish image description', blank=True)
 

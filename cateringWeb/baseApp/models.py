@@ -16,7 +16,7 @@ class MetaData(models.Model):
 
 class websiteDetail(models.Model):
     headline = models.CharField(max_length=200, verbose_name="Headline")
-    title_logo = models.ImageField(upload_to='favicon/', verbose_name="title icon",)  
+    title_logo = models.ImageField(upload_to='media/favicon/', verbose_name="title icon",)  
     #logo = models.ImageField(upload_to='logo/', verbose_name="Business logo", null=True)
     #logo_description = models.CharField(max_length=400, verbose_name='logo description', blank=True)
 
@@ -29,8 +29,8 @@ class HomeSection(models.Model):
     title_text = models.CharField(max_length=100, verbose_name="Title Text")
     description = models.TextField(verbose_name="Description")
     cta_button_text = models.CharField(max_length=100, verbose_name="CTA Button Text")
-    watch_video_button_link = models.URLField(verbose_name="Watch Video Button Link")
-    dish_image = models.ImageField(upload_to='home/', verbose_name="Dish Image")
+    #watch_video_button_link = models.URLField(verbose_name="Watch Video Button Link")
+    dish_image = models.ImageField(upload_to='media/home/', verbose_name="Dish Image")
     image_description = models.CharField(max_length=400, verbose_name='dish image description', blank=True)
 
     def __str__(self):
@@ -45,10 +45,8 @@ class AboutSection(models.Model):
     bullet3 = models.TextField(verbose_name="Bullet Point 3")
     paragraph2 = models.TextField(verbose_name="Paragraph 2")
     phone_number = models.CharField(max_length=15, verbose_name="Phone Number")
-    about_image1 = models.ImageField(upload_to='about/', verbose_name="About Image 1", default='default.jpg1')
+    about_image1 = models.ImageField(upload_to='media/about/', verbose_name="About Image 1", default='default.jpg1')
     image1_description = models.CharField(max_length=400, verbose_name='Image 1 description', default='default')
-    about_image2 = models.ImageField(upload_to='about/', verbose_name="About Image 2", default='default.jpg2')
-    image2_description = models.CharField(max_length=400, verbose_name='Image 1 description', default='default')
  
     def __str__(self):
         return self.description
@@ -86,7 +84,7 @@ class MenuItem(models.Model):
         verbose_name="Category"
     )
     is_available = models.BooleanField(default=True, verbose_name="Is Available")
-    image = models.ImageField(upload_to='menu/', verbose_name="Image")
+    image = models.ImageField(upload_to='media/menu/', verbose_name="Image")
     image_description = models.CharField(max_length=400, verbose_name='item image description', blank=True)
 
 
@@ -143,7 +141,7 @@ class MenuItem(models.Model):
 
 class EventsSection(models.Model): 
     name = models.CharField(max_length=100, verbose_name="Event Name")
-    picture = models.ImageField(upload_to="events/", verbose_name="Event Picture")
+    picture = models.ImageField(upload_to="media/events/", verbose_name="Event Picture")
     image_description = models.CharField(max_length=200, verbose_name="Event Image description", default='default')
     description = models.TextField(verbose_name="Event Description", max_length=200)
 
@@ -152,7 +150,7 @@ class EventsSection(models.Model):
 
 
 class BookADateSection(models.Model):
-    image = models.ImageField(upload_to="book_a_date/", verbose_name="Card Image")
+    image = models.ImageField(upload_to="media/book_a_date/", verbose_name="Card Image")
     image_description = models.CharField(max_length=400, verbose_name='BookADate Section Image Description', default='default')
 
     def __str__(self):
